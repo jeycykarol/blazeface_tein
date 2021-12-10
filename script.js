@@ -1,11 +1,16 @@
 let img = document.getElementById("img");
 let canvas = document.body.appendChild(document.createElement("canvas"));
 let ctx = canvas.getContext("2d");
+const message = document.querySelector('.status');
+const messages = {
+    alerta: 'Alerta! Não está ocorrendo o distanciamento de 1,5 metros!',
+    situ_dist_certa: 'Ótimo! Está com distanciamento de 1,5 metros!'
+}
 
 ctx.canvas.width = img.width;
 ctx.canvas.height = img.height;
 
-async function main() {
+async function findFaces() {
     const model = await blazeface.load();
 
     const returnTensors = false;
@@ -38,5 +43,8 @@ async function main() {
     }
 
 }
+async function calcularDistancia() {
+    let situ_dist_certa = true;
 
-main();
+
+}
