@@ -37,7 +37,7 @@ async function findFaces() {
 
             ctx.fillStyle = "red";
             element.landmarks.forEach((landmark) => {
-                ctx.fillRect(landmark[0], landmark[1], 5, 5);
+                ctx.fillRect(landmark[0], landmark[1], 8, 8);
             });
         });
     }
